@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,900');
+
+body{
+  background-color: #F8DD74;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #4FC5B5;
+  margin: 0;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  width: 90%;
+}
+
+.relativePosition{
+  position: relative;
+  margin: 0;
+}
+
+h1{
+  font-size: 6em;
+  width: 50vw;
+  max-width: 700px;
+  line-height: 1em;
+}
+
+h2{
+  padding-top: 30px;
+  font-size: 2em;
+  width: 65vw;
+  max-width: 800px;
+}
+
+.userField{
+  background: #FFFFFF;
+  border-radius: 5px;
+  height: 2em;
+  border: none;
+  transition: 0.2s;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.userField:focus{
+  outline: none;
+}
+
+.guessField{
+  margin-top: 65px;
+  padding-left: 10px;
+  width: 15em;
+}
+
+.guessSubmit{
+  background-color: #4FC5B5;
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 10em;
+  color: white;
+}
+
+.guessSubmit:hover{
+  background-color: #3f9f92;
+}
+
+.guessSubmit:active{
+  background-color: #338378;
+}
