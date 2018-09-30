@@ -9,9 +9,9 @@ body{
 
 .wrapper{
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, 0%);
   width: 90%;
 }
 
@@ -37,7 +37,8 @@ h2{
 .userField{
   background: #FFFFFF;
   border-radius: 5px;
-  height: 2em;
+  height: 38px;
+  padding: 0;
   border: none;
   transition: 0.2s;
   font-size: 1.1em;
@@ -52,20 +53,101 @@ h2{
   margin-top: 65px;
   padding-left: 10px;
   width: 15em;
+  float: left;
 }
 
-.guessSubmit{
+.submit{
   background-color: #4FC5B5;
   margin-top: 20px;
-  padding-left: 10px;
+  padding-left: 0;
   width: 10em;
   color: white;
 }
 
-.guessSubmit:hover{
+.submitHover:hover{
   background-color: #3f9f92;
 }
 
-.guessSubmit:active{
+.submitHover:active{
   background-color: #338378;
+}
+
+.form{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.textFieldGrid{
+  display: grid;
+  grid-template-columns: 18em 12em;
+}
+
+.guessMessageWrapper{
+  display: none;
+  position: relative;
+  border-radius: 5px;
+  height: 38px;
+  margin-top: 65px;
+  float: left;
+  background-color: transparent;
+}
+
+.tiltedSquare{
+  position: absolute;
+  top: 50%;
+  transform: translate(-6px, -50%) rotate(45deg);
+  background: #FF5B5B;
+  height: 24px;
+  width: 24px;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.lowOrHi{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  margin: 0;
+  padding-left: 15px;
+  color: rgb(255, 235, 235);
+}
+
+.wrong{
+  background: #FF5B5B;
+}
+
+.right{
+  background: #669D4C;
+}
+
+.lastResult{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding-left: 15px;
+  color: #dcffcb;
+}
+
+.shake{
+   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
 }

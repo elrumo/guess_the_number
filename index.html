@@ -4,20 +4,37 @@
     <meta charset="utf-8">
     <title>Guess the number</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/js.js"></script>
   </head>
+
   <body>
+
     <div class="wrapper">
+
       <h1 class="relativePosition"> Number guessing game </h1>
+
       <h2 class="relativePosition">I have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. I’ll tell you if your guess was too high or too low.</h2>
-      <input type="text" id="guessField" class="guessField relativePosition userField" placeholder="Enter a guess">
-      <br>
-      <input type="submit" id="guessField" class="guessSubmit relativePosition userField" value="Submit guess">
-      <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
+
+      <div class="form">
+        <div class="textFieldGrid">
+          <input type="text" id="guessField" class="guessField relativePosition userField" placeholder="Enter a guess">
+          <div class="guessMessageWrapper wrong">
+            <div class="tiltedSquare"></div>
+             <p class="lowOrHi"></p>
+             <p class="lastResult"></p>
+          </div>
+        </div>
+        <div id="buttonsWrapper">
+            <input id="submitButton" type="submit" class="guessSubmit submit relativePosition userField submitHover" value="Submit guess">
+        </div>
       </div>
+
+
+        <p class="guesses"></p>
+
+
     </div>
+
+    <script src="js/js.js"></script>
+
   </body>
 </html>
